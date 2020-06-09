@@ -9,7 +9,7 @@
 import UIKit
 import CoreBluetooth
 
-let kMyAPIKey = "AIzaSyChNXFUeNbuFhlCS0ZLc2gkvRzgj0Il3lk"
+let kMyAPIKey = ""
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
