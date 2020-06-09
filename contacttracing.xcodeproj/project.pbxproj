@@ -3,15 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		186C7764D8071B868AE5AFC8 /* Pods_contacttracingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F91479EA77F1D003E9D9A5D9 /* Pods_contacttracingTests.framework */; };
+		A1AA41828536D2564499E063 /* Pods_contacttracing_contacttracingUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29D02DA6B24C3AFBCF8F87C4 /* Pods_contacttracing_contacttracingUITests.framework */; };
+		BF2DE3ACA16F0C72DC88E6D2 /* Pods_contacttracing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2EAD4C64A81ABD6F92826BB /* Pods_contacttracing.framework */; };
 		F05A6F8E248B708F00C6469A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05A6F8D248B708F00C6469A /* AppDelegate.swift */; };
-		F05A6F90248B708F00C6469A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05A6F8F248B708F00C6469A /* SceneDelegate.swift */; };
 		F05A6F92248B708F00C6469A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05A6F91248B708F00C6469A /* ViewController.swift */; };
-		F05A6F95248B708F00C6469A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F05A6F93248B708F00C6469A /* Main.storyboard */; };
-		F05A6F97248B709100C6469A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F05A6F96248B709100C6469A /* Assets.xcassets */; };
 		F05A6F9A248B709100C6469A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F05A6F98248B709100C6469A /* LaunchScreen.storyboard */; };
 		F05A6FA5248B709200C6469A /* contacttracingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05A6FA4248B709200C6469A /* contacttracingTests.swift */; };
 		F05A6FB0248B709200C6469A /* contacttracingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05A6FAF248B709200C6469A /* contacttracingUITests.swift */; };
@@ -35,11 +35,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		15E82F996B14049CE597F115 /* Pods-contacttracing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-contacttracing.debug.xcconfig"; path = "Target Support Files/Pods-contacttracing/Pods-contacttracing.debug.xcconfig"; sourceTree = "<group>"; };
+		29D02DA6B24C3AFBCF8F87C4 /* Pods_contacttracing_contacttracingUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_contacttracing_contacttracingUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F194A0F825980DBC6AC9D6F /* Pods-contacttracing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-contacttracing.release.xcconfig"; path = "Target Support Files/Pods-contacttracing/Pods-contacttracing.release.xcconfig"; sourceTree = "<group>"; };
+		719D5F7C257FE5B4B0BCEFDC /* Pods-contacttracing-contacttracingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-contacttracing-contacttracingUITests.debug.xcconfig"; path = "Target Support Files/Pods-contacttracing-contacttracingUITests/Pods-contacttracing-contacttracingUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A2954C1E651CFADD07BB1F14 /* Pods-contacttracingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-contacttracingTests.release.xcconfig"; path = "Target Support Files/Pods-contacttracingTests/Pods-contacttracingTests.release.xcconfig"; sourceTree = "<group>"; };
+		B0B2EA9D985DE8710AED3493 /* Pods-contacttracingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-contacttracingTests.debug.xcconfig"; path = "Target Support Files/Pods-contacttracingTests/Pods-contacttracingTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C853813C0DD7227F094D8415 /* Pods-contacttracing-contacttracingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-contacttracing-contacttracingUITests.release.xcconfig"; path = "Target Support Files/Pods-contacttracing-contacttracingUITests/Pods-contacttracing-contacttracingUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E2EAD4C64A81ABD6F92826BB /* Pods_contacttracing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_contacttracing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F05A6F8A248B708F00C6469A /* contacttracing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = contacttracing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F05A6F8D248B708F00C6469A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F05A6F8F248B708F00C6469A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F05A6F91248B708F00C6469A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F05A6F94248B708F00C6469A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F05A6F96248B709100C6469A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F05A6F99248B709100C6469A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F05A6F9B248B709100C6469A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +55,8 @@
 		F05A6FAB248B709200C6469A /* contacttracingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = contacttracingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F05A6FAF248B709200C6469A /* contacttracingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contacttracingUITests.swift; sourceTree = "<group>"; };
 		F05A6FB1248B709200C6469A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F05A6FBD248B742900C6469A /* Contact-Tracing-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Contact-Tracing-Bridging-Header.h"; sourceTree = "<group>"; };
+		F91479EA77F1D003E9D9A5D9 /* Pods_contacttracingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_contacttracingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF2DE3ACA16F0C72DC88E6D2 /* Pods_contacttracing.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				186C7764D8071B868AE5AFC8 /* Pods_contacttracingTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +80,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1AA41828536D2564499E063 /* Pods_contacttracing_contacttracingUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3DE2883BA7C2C40911EBF283 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				15E82F996B14049CE597F115 /* Pods-contacttracing.debug.xcconfig */,
+				4F194A0F825980DBC6AC9D6F /* Pods-contacttracing.release.xcconfig */,
+				719D5F7C257FE5B4B0BCEFDC /* Pods-contacttracing-contacttracingUITests.debug.xcconfig */,
+				C853813C0DD7227F094D8415 /* Pods-contacttracing-contacttracingUITests.release.xcconfig */,
+				B0B2EA9D985DE8710AED3493 /* Pods-contacttracingTests.debug.xcconfig */,
+				A2954C1E651CFADD07BB1F14 /* Pods-contacttracingTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6E04CC84835501AD273C504F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2EAD4C64A81ABD6F92826BB /* Pods_contacttracing.framework */,
+				29D02DA6B24C3AFBCF8F87C4 /* Pods_contacttracing_contacttracingUITests.framework */,
+				F91479EA77F1D003E9D9A5D9 /* Pods_contacttracingTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F05A6F81248B708F00C6469A = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +117,8 @@
 				F05A6FA3248B709200C6469A /* contacttracingTests */,
 				F05A6FAE248B709200C6469A /* contacttracingUITests */,
 				F05A6F8B248B708F00C6469A /* Products */,
+				3DE2883BA7C2C40911EBF283 /* Pods */,
+				6E04CC84835501AD273C504F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,9 +136,8 @@
 			isa = PBXGroup;
 			children = (
 				F05A6F8D248B708F00C6469A /* AppDelegate.swift */,
-				F05A6F8F248B708F00C6469A /* SceneDelegate.swift */,
 				F05A6F91248B708F00C6469A /* ViewController.swift */,
-				F05A6F93248B708F00C6469A /* Main.storyboard */,
+				F05A6FBD248B742900C6469A /* Contact-Tracing-Bridging-Header.h */,
 				F05A6F96248B709100C6469A /* Assets.xcassets */,
 				F05A6F98248B709100C6469A /* LaunchScreen.storyboard */,
 				F05A6F9B248B709100C6469A /* Info.plist */,
@@ -135,9 +170,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F05A6FB4248B709200C6469A /* Build configuration list for PBXNativeTarget "contacttracing" */;
 			buildPhases = (
+				CA68817BDCF4D906EAB8DE73 /* [CP] Check Pods Manifest.lock */,
 				F05A6F86248B708F00C6469A /* Sources */,
 				F05A6F87248B708F00C6469A /* Frameworks */,
 				F05A6F88248B708F00C6469A /* Resources */,
+				CABD8B318438A16586D3B195 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,6 +189,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F05A6FB7248B709200C6469A /* Build configuration list for PBXNativeTarget "contacttracingTests" */;
 			buildPhases = (
+				828FDFA5CA5E331000BD64EE /* [CP] Check Pods Manifest.lock */,
 				F05A6F9C248B709200C6469A /* Sources */,
 				F05A6F9D248B709200C6469A /* Frameworks */,
 				F05A6F9E248B709200C6469A /* Resources */,
@@ -170,9 +208,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F05A6FBA248B709200C6469A /* Build configuration list for PBXNativeTarget "contacttracingUITests" */;
 			buildPhases = (
+				9074F0E369F81062CFE247FE /* [CP] Check Pods Manifest.lock */,
 				F05A6FA7248B709200C6469A /* Sources */,
 				F05A6FA8248B709200C6469A /* Frameworks */,
 				F05A6FA9248B709200C6469A /* Resources */,
+				84A6CA70057038B3A1D2C18E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -233,8 +273,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F05A6F9A248B709100C6469A /* LaunchScreen.storyboard in Resources */,
-				F05A6F97248B709100C6469A /* Assets.xcassets in Resources */,
-				F05A6F95248B708F00C6469A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +292,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		828FDFA5CA5E331000BD64EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-contacttracingTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84A6CA70057038B3A1D2C18E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-contacttracing-contacttracingUITests/Pods-contacttracing-contacttracingUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-contacttracing-contacttracingUITests/Pods-contacttracing-contacttracingUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-contacttracing-contacttracingUITests/Pods-contacttracing-contacttracingUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9074F0E369F81062CFE247FE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-contacttracing-contacttracingUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA68817BDCF4D906EAB8DE73 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-contacttracing-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CABD8B318438A16586D3B195 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-contacttracing/Pods-contacttracing-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-contacttracing/Pods-contacttracing-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-contacttracing/Pods-contacttracing-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F05A6F86248B708F00C6469A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -261,7 +402,6 @@
 			files = (
 				F05A6F92248B708F00C6469A /* ViewController.swift in Sources */,
 				F05A6F8E248B708F00C6469A /* AppDelegate.swift in Sources */,
-				F05A6F90248B708F00C6469A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +437,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F05A6F93248B708F00C6469A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F05A6F94248B708F00C6469A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F05A6F98248B709100C6469A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -432,17 +564,20 @@
 		};
 		F05A6FB5248B709200C6469A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15E82F996B14049CE597F115 /* Pods-contacttracing.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MLTM76FC7P;
 				INFOPLIST_FILE = contacttracing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.syafiq.contacttracing;
+				PRODUCT_BUNDLE_IDENTIFIER = com.syafiq.contacttracingapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "contacttracing/Contact-Tracing-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -450,17 +585,20 @@
 		};
 		F05A6FB6248B709200C6469A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F194A0F825980DBC6AC9D6F /* Pods-contacttracing.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MLTM76FC7P;
 				INFOPLIST_FILE = contacttracing/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.syafiq.contacttracing;
+				PRODUCT_BUNDLE_IDENTIFIER = com.syafiq.contacttracingapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "contacttracing/Contact-Tracing-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -468,6 +606,7 @@
 		};
 		F05A6FB8248B709200C6469A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0B2EA9D985DE8710AED3493 /* Pods-contacttracingTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +629,7 @@
 		};
 		F05A6FB9248B709200C6469A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2954C1E651CFADD07BB1F14 /* Pods-contacttracingTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +652,7 @@
 		};
 		F05A6FBB248B709200C6469A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 719D5F7C257FE5B4B0BCEFDC /* Pods-contacttracing-contacttracingUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +673,7 @@
 		};
 		F05A6FBC248B709200C6469A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C853813C0DD7227F094D8415 /* Pods-contacttracing-contacttracingUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
