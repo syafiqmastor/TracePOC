@@ -15,6 +15,10 @@
 		F05A6F9A248B709100C6469A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F05A6F98248B709100C6469A /* LaunchScreen.storyboard */; };
 		F05A6FA5248B709200C6469A /* contacttracingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05A6FA4248B709200C6469A /* contacttracingTests.swift */; };
 		F05A6FB0248B709200C6469A /* contacttracingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05A6FAF248B709200C6469A /* contacttracingUITests.swift */; };
+		F0D612A2248F80BF00A218F1 /* NearbyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D612A0248F80BF00A218F1 /* NearbyCell.swift */; };
+		F0D612A3248F80BF00A218F1 /* NearbyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0D612A1248F80BF00A218F1 /* NearbyCell.xib */; };
+		F0D612A5248F841300A218F1 /* Nearby.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D612A4248F841300A218F1 /* Nearby.swift */; };
+		F0D612A8248F8E5E00A218F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F05A6F96248B709100C6469A /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,9 @@
 		F05A6FAF248B709200C6469A /* contacttracingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contacttracingUITests.swift; sourceTree = "<group>"; };
 		F05A6FB1248B709200C6469A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F05A6FBD248B742900C6469A /* Contact-Tracing-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Contact-Tracing-Bridging-Header.h"; sourceTree = "<group>"; };
+		F0D612A0248F80BF00A218F1 /* NearbyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyCell.swift; sourceTree = "<group>"; };
+		F0D612A1248F80BF00A218F1 /* NearbyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NearbyCell.xib; sourceTree = "<group>"; };
+		F0D612A4248F841300A218F1 /* Nearby.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nearby.swift; sourceTree = "<group>"; };
 		F91479EA77F1D003E9D9A5D9 /* Pods_contacttracingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_contacttracingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -137,6 +144,9 @@
 			children = (
 				F05A6F8D248B708F00C6469A /* AppDelegate.swift */,
 				F05A6F91248B708F00C6469A /* ViewController.swift */,
+				F0D612A4248F841300A218F1 /* Nearby.swift */,
+				F0D612A0248F80BF00A218F1 /* NearbyCell.swift */,
+				F0D612A1248F80BF00A218F1 /* NearbyCell.xib */,
 				F05A6FBD248B742900C6469A /* Contact-Tracing-Bridging-Header.h */,
 				F05A6F96248B709100C6469A /* Assets.xcassets */,
 				F05A6F98248B709100C6469A /* LaunchScreen.storyboard */,
@@ -272,6 +282,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0D612A8248F8E5E00A218F1 /* Assets.xcassets in Resources */,
+				F0D612A3248F80BF00A218F1 /* NearbyCell.xib in Resources */,
 				F05A6F9A248B709100C6469A /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,7 +412,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0D612A5248F841300A218F1 /* Nearby.swift in Sources */,
 				F05A6F92248B708F00C6469A /* ViewController.swift in Sources */,
+				F0D612A2248F80BF00A218F1 /* NearbyCell.swift in Sources */,
 				F05A6F8E248B708F00C6469A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
