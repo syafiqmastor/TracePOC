@@ -9,55 +9,19 @@
 import UIKit
 import CoreBluetooth
 
-let cellIdentifier = "messageCell"
+let cellIdentifier = "NearbyCell"
 
 class MessageViewController: UITableViewController {
-    /**
-     * @property
-     * The left button to use in the nav bar.
-     */
-    var leftBarButton: UIBarButtonItem! {
-        get {
-            return navigationItem.leftBarButtonItem
-        }
-        set(leftBarButton) {
-            navigationItem.leftBarButtonItem = leftBarButton
-        }
-    }
-    /**
-     * @property
-     * The right button to use in the nav bar.
-     */
-    var rightBarButton: UIBarButtonItem! {
-        get {
-            return navigationItem.rightBarButtonItem
-        }
-        set(rightBarButton) {
-            navigationItem.rightBarButtonItem = rightBarButton
-        }
-    }
     
-    var messages = [String]()
+    var messages = [Nearby]()
     var centralManager: CBCentralManager!
-    
-    /**
-     * @property
-     * This class lets you check the permission state of Nearby for the app on the current device.  If
-     * the user has not opted into Nearby, publications and subscriptions will not function.
-     */
+    var peripheralManager : CBPeripheralManager?
     var nearbyPermission: GNSPermission!
-    
-    /**
-     * @property
-     * The message manager lets you create publications and subscriptions.  They are valid only as long
-     * as the manager exists.
-     */
-    
     var messageMgr: GNSMessageManager?
     var publication: GNSPublication?
     var subscription: GNSSubscription?
     let notificationCenter = UNUserNotificationCenter.current()
-    
+    let userDefaults = UserDefaults.standard
     lazy var dateFormatter : DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm dd MMM yy"
@@ -66,8 +30,15 @@ class MessageViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: cellIdentifier)
+        
+        tableView.register(UINib(nibName: cellIdentifier, bundle: nil), forCellReuseIdentifier: cellIdentifier)
         centralManager = CBCentralManager(delegate: self, queue: nil)
+        peripheralManager = CBPeripheralManager(delegate: self, queue: nil)
+        
+        
+        let notificationCenter = NotificationCenter.default
+           notificationCenter.addObserver(self, selector: #selector(appMovedToForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
+        
         
         // Set up the message view navigation buttons.
         nearbyPermission = GNSPermission(changedHandler: {[unowned self] granted in
@@ -103,13 +74,28 @@ class MessageViewController: UITableViewController {
         
     }
     
+    @objc func appMovedToForeground() {
+        print("App moved to background!")
+//        retrieveLocal()
+    }
+    
     func addMessage(_ message: String!) {
-        messages.append(message.copy() as! String)
+        
+        let msg = message.copy() as! String
+        let nearby = Nearby(type: "Nearby API", title: msg, date: Date(), multiplier: "Multiplier not available", rssi: "RSSI not available")
+        messages.append(nearby)
+        tableView.reloadData()
+    }
+    
+    func addNearby(_ nearby: Nearby) {
+        
+        messages.append(nearby)
         tableView.reloadData()
     }
     
     func removeMessage(_ message: String!) {
-        if let index = messages.firstIndex(of: message)
+        
+        if let index = messages.firstIndex(where: {$0.title.lowercased() == message.lowercased()})
         {
             messages.remove(at: index)
         }
@@ -127,8 +113,8 @@ class MessageViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UITableViewCell! = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
-        cell.textLabel?.text = messages[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? NearbyCell else { return UITableViewCell() }
+        cell.add(nearby: messages[indexPath.row])
         return cell
     }
     
@@ -153,8 +139,20 @@ class MessageViewController: UITableViewController {
 //        let randomName = String(format:"Anonymous fanta %d", arc4random() % 100)
         startSharing(withName: deviceName)
         setupStartStopButton()
+        setupTimerToScan()
+        let cbuuid = CBUUID(string: "E20A39F4-73F5-4BC4-A12F-17D1AD07A961")
+        self.centralManager.scanForPeripherals(withServices: [cbuuid])
     }
 
+    func setupTimerToScan() {
+        _ = Timer.scheduledTimer(withTimeInterval: 30, repeats: true) { (timer) in
+            print("scan around again")
+//            self.centralManager.stopScan()
+            let cbuuid = CBUUID(string: "E20A39F4-73F5-4BC4-A12F-17D1AD07A961")
+            self.centralManager.scanForPeripherals(withServices: [cbuuid])
+        }
+    }
+    
     /// Stops publishing/subscribing.
     @objc func stopSharing() {
         publication = nil
@@ -176,10 +174,8 @@ class MessageViewController: UITableViewController {
             // Show the name in the message view title and set up the Stop button.
             self.title = name
             
-            let stringDate = dateFormatter.string(from: Date())
-            let allString = name + " at " + stringDate
             // Publish the name to nearby devices.
-            let pubMessage: GNSMessage = GNSMessage(content: allString.data(using: .utf8,
+            let pubMessage: GNSMessage = GNSMessage(content: name.data(using: .utf8,
                                                                        allowLossyConversion: true))
 
             publication = messageMgr.publication(with: pubMessage, paramsBlock: { (params: GNSPublicationParams?) in
@@ -198,10 +194,12 @@ class MessageViewController: UITableViewController {
 
                 // Send a local notification if not in the foreground.
                 if UIApplication.shared.applicationState != .active {
+                    
+//                    self.saveLocally(message: messageString)
+                    
                     let localNotification = UNMutableNotificationContent()
                     localNotification.body = messageString
-                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
-
+                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2, repeats: false)
                     let request = UNNotificationRequest(identifier: UUID().uuidString, content: localNotification, trigger: trigger)
                     self.notificationCenter.add(request)
                 }
@@ -215,10 +213,22 @@ class MessageViewController: UITableViewController {
                         params.allowInBackground = true
                     })
             })
-
         }
     }
-
+    
+    func saveLocally(message : String) {
+        let nearby = Nearby(type: "Nearby API", title: message, date: Date(), isBackground: true, multiplier: "Multiplier not available", rssi: "RSSI not available")
+        let userDefaults = UserDefaults.standard
+        let encodedData: Data = NSKeyedArchiver.archivedData(withRootObject: nearby)
+        userDefaults.set(encodedData, forKey: "background")
+        userDefaults.synchronize()
+    }
+    
+    func retrieveLocal() {
+        guard let decoded  = userDefaults.data(forKey: "background") else { return }
+        guard let decodedNearby = NSKeyedUnarchiver.unarchiveObject(with: decoded) as? Nearby else { return }
+        self.messages.append(decodedNearby)
+    }
 }
 
 extension MessageViewController : CBCentralManagerDelegate {
@@ -236,7 +246,6 @@ extension MessageViewController : CBCentralManagerDelegate {
             print("central.state is .poweredOff")
         case .poweredOn:
             print("central.state is .poweredOn")
-            centralManager.scanForPeripherals(withServices: [])
         @unknown default:
             fatalError()
         }
@@ -245,22 +254,30 @@ extension MessageViewController : CBCentralManagerDelegate {
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
         if let power = advertisementData[CBAdvertisementDataTxPowerLevelKey] as? Double{
 //        print("Distance for \(power), \(RSSI) is \(pow(10, ((power - Double(truncating: RSSI))/20)))")
-            print("distance :\(calculateDistance(txCalibratedPower: power, rssi: RSSI))")
+            let id = peripheral.identifier
+            let name = peripheral.name ?? String(describing: id)
+            print("distance from \(peripheral) :\(calculateDistance(txCalibratedPower: power, rssi: RSSI))")
+            
+            let nearby = Nearby(type: "Bluetooth", title: name, date: Date(), isBackground: false, multiplier: "txCalibratedPower : \(power)", rssi: "RSSI : \(RSSI)")
+            self.addNearby(nearby)
         }
     }
     
-    
     func calculateDistance(txCalibratedPower : Double, rssi RSSI : NSNumber) -> Double {
-        
         let ratio = Double(truncating: RSSI) / txCalibratedPower
-        
         if ratio < 1.0 {
             return pow(10, ratio)
         } else {
             let accuracy = 0.89976 * pow(ratio, 7.7095) + 0.111
             return accuracy
         }
-        
+    }
+}
+
+extension MessageViewController : CBPeripheralManagerDelegate {
+    func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager) {
         
     }
+    
+    
 }
